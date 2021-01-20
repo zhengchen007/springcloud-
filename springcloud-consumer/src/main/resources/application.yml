@@ -1,0 +1,10 @@
+server:
+  port: 8088
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka                   #将服务注册进eureka-server服务列表中
+  instance:
+    instance-id: springcloud-consumer-80
+    prefer-ip-address: true                                       #访问路径可以显示IP地址
