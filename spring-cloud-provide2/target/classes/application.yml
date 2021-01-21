@@ -1,13 +1,13 @@
 server:
-  port: 8001
+  port: 8002
 spring:
   application:
-    name: springcloud-provider-dept                               #对外暴露的微服务的名字(微服务最重要的名字) 
+    name: springcloud-provider-dept                            #对外暴露的微服务的名字(微服务最重要的名字) 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka                   #将服务注册进eureka-server服务列表中
   instance:
-    hostname: 10.201.2.64 #本机ip地址，可不配
-    instance-id: springcloud-provider-8001
+    hostname: 10.201.2.65 #本机ip地址，可不配
+    instance-id: springcloud-provider-8002
     prefer-ip-address: true                                       #访问路径可以显示IP地址

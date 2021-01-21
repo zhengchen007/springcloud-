@@ -80,11 +80,11 @@
 
 
 	<modules>
-		<module>springcloud-Eureka</module>
 		<module>springcloud-provide</module>
 		<module>springcloud-api</module>
 		<module>springcloud-eureka-server</module>
 		<module>springcloud-consumer</module>
+		<module>spring-cloud-provide2</module>
 	</modules>
 
 </project>

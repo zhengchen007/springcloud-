@@ -8,3 +8,11 @@ eureka:
   instance:
     instance-id: springcloud-consumer-80
     prefer-ip-address: true                                       #访问路径可以显示IP地址
+springcloud-provider-dept: 
+    ribbon:
+      NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule #配置规则 随机  
+                                   #com.netflix.loadbalancer.RoundRobinRule ：以轮询的方式进行负载均衡。
+                                   #com.netflix.loadbalancer.RetryRule ：重试策略。
+                                   #com.netflix.loadbalancer.WeightedResponseTimeRule ：权重策略。会计算每个服务的权重，越高的被调用的可能性越大。
+                                   #com.netflix.loadbalancer.BestAvailableRule ：最佳策略。遍历所有的服务实例，过滤掉故障实例，并返回请求数最小的实例返回。
+                                   #com.netflix.loadbalancer.AvailabilityFilteringRule ：可用过滤策略。过滤掉故障和请求数超过阈值的服务实例，再从剩下的实力中轮询调用。
